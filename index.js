@@ -18,15 +18,8 @@ document.addEventListener("keypress", function(Event){
 
 });
 
-
-
 function sound(key){
     switch(key){
-        case "w":
-            var tom = new Audio("./sounds/tom-1.mp3");
-            tom.play();
-            break;
-
         case "w":
             var tom1 = new Audio("./sounds/tom-1.mp3");
             tom1.play();
