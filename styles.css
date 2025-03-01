@@ -1,7 +1,6 @@
 body {
   text-align: center;
   background-color: #A1E3F9;
-  
 }
 
 h1 {
@@ -45,9 +44,11 @@ footer {
 }
 
 .set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 10% auto;
 }
-
 
 .pressed {
   box-shadow: 0 3px 4px 0 #DBEDF3;
@@ -70,23 +71,39 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+  background-size: cover;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
+.drum:active {
+  transform: scale(0.9);
+  background-color: #ffcc00;
+}
 
-@media(max-Width: 480px){
-  h1{
+@media(max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  .drum {
+    font-size: 4rem;
+    width: 120px;
+    height: 120px;
+    margin: 8px;
+  }
+}
+
+@media(max-width: 480px) {
+  h1 {
     font-size: 3rem;
   }
-  .drum{
+  .drum {
     font-size: 3rem;
-    display: inline;
     width: 100px;
     height: 100px;
     margin: 5px;
   }
   footer {
-    color: #3674B5;
-    font-family: "Lexend", serif;
-    font-size: .5rem;
+    font-size: 0.5rem;
   }
 }
